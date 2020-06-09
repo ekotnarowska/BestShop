@@ -1,0 +1,15 @@
+// *--------- TRANSITIONS ---------*
+@mixin transition($props: all, $speed: 0.5s, $easing: ease) {
+  -webkit-transition: $props $speed $easing;
+  -moz-transition: $props $speed $easing;
+  -o-transition: $props $speed $easing;
+  -ms-transition: $props $speed $easing;
+  transition: $props $speed $easing;
+}
+
+@mixin hamburger-line {
+      width: 100%;
+      height: 3px;
+      position: absolute;
+      background-color: $color__blue-accent;
+}

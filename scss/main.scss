@@ -1,0 +1,38 @@
+// *--------- CSS RESET ---------*
+@import "base/reset";
+// *--------- VARIABLES ---------*
+@import "helpers/variables";
+//// *--------- MIXINS ---------*
+@import "helpers/mixins";
+// *--------- TYPOGRAPHY ---------*
+@import "base/typography";
+// ---------------------
+//     COMPONENTS
+// ---------------------
+// *--------- BUTTONS ---------*
+@import "components/buttons";
+// *--------- FORMS ---------*
+@import "components/forms";
+// ---------------------
+//     LAYOUT
+// ---------------------
+// *--------- GENERAL ---------*
+@import "layout/general";
+// *--------- HEADER ---------*
+@import "layout/header";
+
+// *--------- BANNER ---------*
+@import "layout/banner";
+// *--------- STATISTICS ---------*
+@import "layout/statistics";
+// *--------- BENEFITS ---------*
+@import "layout/benefits";
+// *--------- PRICING ---------*
+@import "layout/pricing";
+// *--------- CONTACT ---------*
+@import "layout/contact";
+//-----------CALCULATOR--------*
+@import "layout/calculator";
+// *--------- FOOTER ---------*
+@import "layout/footer";
+

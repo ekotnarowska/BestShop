@@ -1,0 +1,68 @@
+
+.banner {
+    height: 100vh;
+    width: 100vw;
+    padding-top: 170px;
+  
+    &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+     
+    }
+  
+    &__title {
+      text-align: center;
+      margin: 0 0 20px 0;
+    }
+  
+    &__text {
+      text-align: center;
+    }
+  
+    &__btn {
+      background-color: $color__blue-accent;
+      box-shadow: 5px 10px 14px $color__light-shadow;
+      width: 440px;
+      height: 67px;
+      padding: 23px 0;
+      margin: 38px auto 30px;
+      border-radius: 40px;
+      text-align: center;
+  
+      &:hover {
+        @include transition;
+        transform: scale(1.05);
+        background-color: darken($color__blue-accent, 5%);
+        box-shadow: 5px 10px 14px rgba(darken($color__light-shadow, 30%), 0.5);
+      }
+    }
+  
+    &__image {
+      background: transparent url("../assets/Background.png") no-repeat center bottom;
+      background-size: contain;
+      height: 50%;
+    }
+  }
+
+
+  @media (max-width: 880px) {
+
+.banner {
+    &__title {
+        font-size: $base__font-size*2.2;
+    }
+    &__info {
+        margin: 0 35px;
+        font-size: $base__font-size;
+    }
+
+    &__btn {
+        width: 300px;
+        font-size: $base__font-size;
+    }
+}
+
+  }
+ 

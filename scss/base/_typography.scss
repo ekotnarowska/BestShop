@@ -1,0 +1,57 @@
+// -------------------------------
+//     TYPOGRAPHY VARIABLES
+// -------------------------------
+
+// *--------- TYPOGRAPHY ---------*
+$base__font-family: "Open Sans", sans-serif; // 400, 700
+$base__font-size: 16px;
+$base__font-weight: 400;
+$base__font-weight--bold: 700;
+$base__line-height: 1.375em;
+
+$secondary__font-family: "Raleway", sans-serif; // 400, 700
+$base__text-color: #000;
+
+// *--------- GENERAL ---------*
+body {
+  font: $base__font-weight #{$base__font-size}/1 $base__font-family;
+  color: $base__text-color;
+  line-height: $base__line-height;
+}
+
+
+// *--------- TEXT ---------*
+
+h1, h2, h3, h4, h5, h6 {
+  font: $secondary__font-family;
+  color: $base__font-size;
+  letter-spacing: 0;
+}
+
+h2, h3 {
+  font-weight: $base__font-weight;
+}
+
+h4, h5 {
+  font-weight: $base__font-weight--bold;
+
+}
+
+h2 {
+  font-size: #{$base__font-size*3.0625};
+  line-height: #{$base__font-size*3.5625};
+}
+
+h3 {
+  font-size: #{$base__font-size*2.25};
+  line-height: #{$base__font-size*2.625};
+}
+
+h4 {
+  font-size: #{$base__font-size*1.25};
+  line-height: #{$base__font-size*1.5};
+  letter-spacing: 6px;
+}
+a {
+  text-decoration: none;
+}

@@ -1,0 +1,255 @@
+
+.contact {
+  padding: 100px 0 60px 0;
+
+  .content {
+    max-width: 896px;
+    height: 372px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__right {
+    width: 49%;
+    height: auto;
+    position: relative;
+
+    form {
+      label[for=checkbox1] {
+        padding-left: 34px;
+        display: block;
+        cursor: pointer;
+        position: relative;
+      }
+
+      label[for=checkbox1] p {
+        color: $color__darkgrey-text;
+        font-size: 12px;
+        line-height: 1.4em;
+        text-align: left;
+        margin-top: 30px;
+      }
+
+      label[for=checkbox1]::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: '';
+        display: block;
+        background: $color__white;
+        border: 1px solid $color__dark-border;
+        border-radius: 4px;
+        opacity: 1;
+        box-sizing: border-box;
+        width: 24px;
+        height: 24px;
+      }
+
+      #checkbox1:checked ~ label[for=checkbox1]::before {
+        background: $color__white url("../assets/Checkmark.svg") no-repeat center center;
+      }
+
+
+      #checkbox1 {
+        display: none;
+      }
+    }
+
+    input[type=text] {
+      display: block;
+      width: 100%;
+      background: none;
+      outline: 0;
+      border: 0;
+      border-bottom: 1px solid $color__dark-shadow;
+      height: 40px;
+      font-size: 20px;
+      font-family: 'Raleway', sans-serif;
+      color: $color__black;
+    }
+  }
+
+  .form {
+    &__name,
+    &__email {
+      color: $color__blue-accent;
+      display: block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3.28px;
+      line-height: 1.5em;
+      text-transform: uppercase;
+
+    }
+
+    &__email {
+      margin-top: 42px;
+    }
+
+
+    &__btn {
+      width: 226px;
+      height: 57px;
+      border: none;
+      font: 700 13px/18px Open Sans;
+      background: $color__blue-accent;
+      box-shadow: 5px 10px 14px $color__light-shadow;
+      border-radius: 35px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      cursor: pointer;
+      outline: none;
+
+      &:hover {
+        @include transition;
+        transform: scale(1.05);
+        background-color: darken($color__blue-accent, 5%);
+        box-shadow: 5px 10px 14px rgba(darken($color__light-shadow, 30%), 0.5);
+      }
+
+    }
+
+  }
+
+  &__left {
+    width: 49%;
+  }
+
+  &__title {
+    padding-bottom: 22px;
+    margin-top: 0;
+  }
+
+  &__text {
+    font-size: 16px;
+    padding-bottom: 42px;
+  }
+
+  &__data {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  &__email,
+  &__phone {
+    font-size: 16px;
+    font-weight: 600;
+    color: $color__grey-text;
+    margin-right: 24px;
+    margin-left: 37px;
+    position: relative;
+  }
+
+  &__email::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background: transparent url("../assets/Mail Icon.svg") 0% 0% no-repeat padding-box;
+    width: 27px;
+    height: 27px;
+    top: -5px;
+    left: -35px;
+  }
+
+  &__phone::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background: transparent url('../assets/Phone Icon.svg') 0% 0% no-repeat padding-box;
+    width: 27px;
+    height: 27px;
+    top: -5px;
+    left: -37px;
+  }
+}
+
+
+@media (max-width: 1000px) {
+  .contact {
+    padding: 50px 0 60px 0;
+
+    .content {
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+    }
+
+    &__left {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 50px;
+    }
+
+    &__title {
+      font-size: 40px;
+      padding-bottom: 12px;
+    }
+
+    &__text {
+      font-size: 16px;
+      padding-bottom: 32px;
+    }
+
+    &__data {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &__email,
+    &__phone {
+      display: block;
+      padding: 10px 0;
+
+    }
+
+    &__email::before {
+      top: 10px;
+      left: -35px;
+    }
+
+    &__phone::before {
+      top: 10px;
+      left: -37px;
+    }
+
+    &__right {
+      width: 100%;
+      padding: 0 50px;
+      margin-top: 50px;
+
+    }
+
+    .form {
+      &__name,
+      &__email {
+        color: $color__blue-accent;
+        display: block;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 3.28px;
+        line-height: 1.5em;
+        text-transform: uppercase;
+
+      }
+
+      &__email {
+        margin-top: 42px;
+      }
+
+
+      &__btn {
+
+        margin-top: 20px;
+        position: relative;
+
+      }
+
+    }
+  }
+}
+  

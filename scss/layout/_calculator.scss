@@ -1,0 +1,245 @@
+.calculator {
+  padding: 40px 50px;
+  background: $color__light-background;
+  height: 70vh;
+
+  &__title {
+    text-align: center;
+    margin: 40px;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    height: 100%;
+  }
+
+  &__data {
+    width: 440px;
+    max-width: 100%;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    label[for=checkbox__accounting],
+    label[for=checkbox__rental] {
+      padding-left: 34px;
+      display: block;
+      cursor: pointer;
+      position: relative;
+    }
+
+    label[for=checkbox__accounting] p,
+    label[for=checkbox__rental] p {
+      display: inline-block;
+      color: $color__darkgrey-text;
+      font-size: 12px;
+      text-align: left;
+      margin-top: 20px;
+      height: 24px;
+      line-height: 24px;
+    }
+
+    label[for=checkbox__accounting]::before,
+    label[for=checkbox__rental]::before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      content: '';
+      display: block;
+      background: $color__white;
+      border: 1px solid $color__dark-border;
+      border-radius: 4px;
+      opacity: 1;
+      box-sizing: border-box;
+      width: 24px;
+      height: 24px;
+      margin-top: 20px;
+    }
+
+    #checkbox__accounting:checked ~ label[for=checkbox__accounting]::before {
+      background: $color__white url("../assets/Checkmark.svg") no-repeat center center;
+    }
+
+    #checkbox__rental:checked ~ label[for=checkbox__rental]::before {
+      background: $color__white url("../assets/Checkmark.svg") no-repeat center center;
+    }
+
+
+    #checkbox__accounting,
+    #checkbox__rental {
+      display: none;
+    }
+
+  }
+
+  &__products-input,
+  &__orders-input {
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    background: $color__white;
+    box-shadow: 0px 3px 6px $color__blue-shadow;
+    border: 1px solid $color__blue-accent;
+    border-radius: 6px;
+    outline: none;
+    color: $color__darkgrey-text;
+    padding: 0 15px;
+
+    &::placeholder {
+      text-align: left;
+      font-size: $base__font-size*0.8125;
+      color: $color__grey-text;
+    }
+
+  }
+
+  &__orders-input {
+    margin-top: 20px;
+  }
+
+  &__package {
+
+    width: 100%;
+
+    &-select {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      height: 40px;
+      margin-top: 20px;
+      background: $color__white;
+      box-shadow: 0px 3px 6px $color__blue-shadow;
+      border: 1px solid $color__blue-accent;
+      border-radius: 6px;
+      text-align: left;
+      padding: 0 15px;
+    }
+
+    &-text {
+      font-size: $base__font-size*0.8125;
+      line-height: 40px;
+      color: $color__darkgrey-text;
+    }
+
+
+    &-list {
+      list-style: none;
+      background: $color__white;
+      box-shadow: 0px 3px 6px $color__calculator-shadow;
+      border: 1px solid $color__calculator-border;
+      border-radius: 6px;
+      margin-top: 10px;
+      padding: 10px 0px;
+    }
+
+    &-item {
+      font-size: $base__font-size*0.8125;
+      padding: 0 20px;
+
+      &:hover {
+        background: $color__light-background;
+        box-shadow: 0px 3px 6px $color__light-shadow;
+        border-radius: 6px;
+
+      }
+
+      &:nth-child(2) {
+        margin: 15px 0;
+      }
+    }
+  }
+
+  &__result {
+    display: flex;
+    width: 385px;
+    max-width: 100%;
+    flex-direction: column;
+    align-items: flex-end;
+
+
+    &-products,
+    &-orders,
+    &-package,
+    &-accounting,
+    &-terminal,
+    &-total {
+      height: 31px;
+      width: 100%;
+      background: $color__green-accent;
+      box-shadow: 0px 3px 6px $color__dark-shadow;
+      border-radius: 6px;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      color: $color__white;
+      font-size: 0.875*$base__font-size;
+      align-items: center;
+      padding: 0 20px;
+
+
+    }
+
+    &-total {
+      width: 180px;
+      height: 38px;
+      background: $color__blue-accent;
+      margin-top: 40px;
+
+    }
+
+  }
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.is-hidden {
+  display: none
+}
+
+.up {
+  transform: rotate(180deg)
+}
+
+@media (max-width: 1000px) {
+  .calculator {
+    height: auto;
+
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__form {
+
+      align-items: flex-start;
+    }
+
+    &__result {
+      margin-top: 50px;
+      align-items: flex-start;
+
+      &-products,
+      &-orders,
+      &-package,
+      &-accounting,
+      &-terminal,
+      &-total {
+      }
+      &-total {
+        margin-top: 20px;
+        align-self: flex-end;
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+
+.footer {
+  height: 89px;
+  background-color: $color__light-background;
+  box-shadow: 0 -5px 40px $color__dark-shadow;
+
+  .container {
+    height: 100%;
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo-link {
+    font: 300 26px Raleway;
+    color: $color__blue-accent;
+  }
+
+  &__text {
+    font-size: 11px;
+    color: $color__grey-text;
+  }
+
+  &__left {
+
+  }
+
+  &__twitter {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url("../assets/Twitter.svg");
+    margin-right: 15px;
+  }
+
+  &__facebook {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url("../assets/Facebook.svg");
+  }
+}
+
