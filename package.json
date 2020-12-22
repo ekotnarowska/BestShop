@@ -23,6 +23,6 @@
   "dependencies": {
     "gulp-autoprefixer": "^7.0.1",
     "gulp-sourcemaps": "^2.6.5",
-    "node-notifier": "^6.0.0"
+    "node-notifier": "^8.0.1"
   }
 }
